@@ -53,7 +53,6 @@ struct BoneJointPos
     bool IsVisible = false;
 };
 
-bool ReadAllEntities(uintptr_t clientBase, EntityPointer* outEntities);
 
 ViewMatrix GetGameViewMatrix(uintptr_t Client);
 uintptr_t GetBaseEntity(uintptr_t Client, int index);
