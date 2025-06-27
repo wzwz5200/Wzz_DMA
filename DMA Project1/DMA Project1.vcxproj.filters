@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="dma">
+      <UniqueIdentifier>{0d1f8378-bbdd-44c3-961e-08bf028af45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Offsets">
+      <UniqueIdentifier>{936bb24b-7dc6-4553-9890-a65e1db0ebfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack">
+      <UniqueIdentifier>{153eb8e8-1921-4a59-bf7c-4ecd4716bbb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hack\struct">
+      <UniqueIdentifier>{3fdac84a-5d19-4452-ae30-c0512ca4e4bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{c95fb29d-cb24-4238-82c9-5950f98054ed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\Memory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\InputManager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\Registry.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Memory\Shellcode.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nt\structs.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\animationsystem_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\buttons.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\client_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\engine2_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\host_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\interfaces.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\materialsystem2_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\networksystem_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\offsets.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\panorama_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\particles_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\pulse_system_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\rendersystemdx11_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\resourcesystem_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\scenesystem_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\schemasystem_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\server_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\soundsystem_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\vphysics2_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets\worldrenderer_dll.hpp">
+      <Filter>Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Hack.h">
+      <Filter>Hack</Filter>
+    </ClInclude>
+    <ClInclude Include="math_.h">
+      <Filter>Hack\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_dx11.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_impl_win32.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="ImGui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="SimpleOV.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\Shellcode.cpp">
+      <Filter>dma</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\Registry.cpp">
+      <Filter>dma</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>dma</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\Memory.cpp">
+      <Filter>dma</Filter>
+    </ClCompile>
+    <ClCompile Include="Memory\InputManager.cpp">
+      <Filter>dma</Filter>
+    </ClCompile>
+    <ClCompile Include="Hack.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_dx11.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_impl_win32.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="math_.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FTD3XX.dll" />
+  </ItemGroup>
+</Project>
