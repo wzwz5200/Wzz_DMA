@@ -51,6 +51,7 @@ void CheatInit::Cache(uintptr_t Client)
     auto drawList = ImGui::GetBackgroundDrawList();
 
     ControllerInfo entities[kMaxEntities]{};
+    PlayerNameInfo names[kMaxEntities]{};
 
     if (ReadControllersAndPawns(Client, entities, kMaxEntities)) {
         for (int i = 0; i < kMaxEntities; ++i) {
@@ -106,8 +107,19 @@ void CheatInit::Cache(uintptr_t Client)
                 ImVec2(headScreen.x + width / 2, footScreen.y),
                 ImGui::ColorConvertFloat4ToU32(espColor), 0.0f, 0, 1.5f);
        
+           
 
-            std::cout << pos.head.x << std::endl;
+            if (ReadAllPlayerNames(entities, kMaxEntities, names)) {
+            
+                std::string playerName = names[i].name[0] ? names[i].name : "unknown";
+           
+                drawList->AddText(ImVec2(headScreen.x, headScreen.y - 15),
+                    IM_COL32(255, 255, 255, 255), playerName.c_str());
+
+            }
+
+          
+            
 
 
 

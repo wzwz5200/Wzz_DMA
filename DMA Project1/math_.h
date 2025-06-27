@@ -17,7 +17,6 @@ constexpr int kEntitiesPerPage = 8;
 constexpr int kPageCount = kMaxEntities / kEntitiesPerPage;
 
 
-
 struct Vector3 {
     float x, y, z;
 
@@ -53,6 +52,11 @@ struct BoneJointPos
     bool IsVisible = false;
 };
 
+struct PlayerNameInfo {
+    uintptr_t strAddr;
+    char name[50];
+};
+
 
 ViewMatrix GetGameViewMatrix(uintptr_t Client);
 uintptr_t GetBaseEntity(uintptr_t Client, int index);
@@ -68,6 +72,11 @@ struct ControllerInfo {
     uint32_t pawnHandle;
     uintptr_t pawnPtr;
 };
+
+
+std::string GetName(uintptr_t playerController);
+
+bool ReadAllPlayerNames(const ControllerInfo* controllers, int count, PlayerNameInfo* outNames);
 
 
 bool ReadControllersAndPawns(uintptr_t clientBase, ControllerInfo* outControllers, int maxCount);

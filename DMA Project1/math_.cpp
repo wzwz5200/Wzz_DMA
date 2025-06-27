@@ -124,6 +124,52 @@ PlayerPosition GetPlayerPosition(uintptr_t Client, uintptr_t playerController)
     return pos;
 }
 
+std::string GetName(uintptr_t playerController)
+{
+    std::string name;
+    uintptr_t temp = mem.Read<uintptr_t>(playerController + cs2_dumper::schemas::client_dll::CCSPlayerController::m_sSanitizedPlayerName);
+    if (temp) {
+        char buff[50]{};
+        mem.Read(temp, &buff, sizeof(buff));  // sizeof(buff) == 50
+        name = std::string(buff);
+    }
+    else {
+        name = "unknown";
+    }
+    return name;
+}
+
+bool ReadAllPlayerNames(const ControllerInfo* controllers, int count, PlayerNameInfo* outNames)
+{
+    //批量读名字字符串地址
+    auto handle1 = mem.CreateScatterHandle();
+    for (int i = 0; i < count; ++i) {
+        if (!controllers[i].controllerPtr) {
+            outNames[i].strAddr = 0;
+            continue;
+        }
+        uintptr_t addr = controllers[i].controllerPtr + cs2_dumper::schemas::client_dll::CCSPlayerController::m_sSanitizedPlayerName;
+        mem.AddScatterReadRequest(handle1, addr, &outNames[i].strAddr);
+    }
+    mem.ExecuteReadScatter(handle1);
+    mem.CloseScatterHandle(handle1);
+
+   //批量读名字内容
+    auto handle2 = mem.CreateScatterHandle();
+    for (int i = 0; i < count; ++i) {
+        if (!outNames[i].strAddr) {
+            memset(outNames[i].name, 0, sizeof(outNames[i].name));
+            continue;
+        }
+        mem.AddScatterReadRequest(handle2, outNames[i].strAddr, outNames[i].name, sizeof(outNames[i].name));
+    }
+    mem.ExecuteReadScatter(handle2);
+    mem.CloseScatterHandle(handle2);
+
+    return true;
+}
+
+
 bool ReadControllersAndPawns(uintptr_t clientBase, ControllerInfo* outControllers, int maxCount)
 {
     uintptr_t entityList = mem.Read<uintptr_t>(clientBase + cs2_dumper::offsets::client_dll::dwEntityList);
